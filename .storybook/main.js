@@ -7,7 +7,15 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
-    "@storybook/addon-storysource",
     "storybook-dark-mode",
+    {
+      name: "@storybook/addon-storysource",
+      options: {
+        loaderOptions: {
+          injectStoryParameters: true,
+          prettierConfig: { printWidth: 80, singleQuote: false },
+        },
+      },
+    },
   ],
 };
