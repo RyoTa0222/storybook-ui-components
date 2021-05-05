@@ -50,7 +50,7 @@ const Task = ({
           type="text"
           value={title}
           readOnly={true}
-          style={{ background: "red" }}
+          style={{ textOverflow: "ellipsis" }}
           placeholder="Input title"
         />
       </div>
