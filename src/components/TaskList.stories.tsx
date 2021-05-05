@@ -4,11 +4,32 @@ import { Props } from "./TaskList";
 
 import { PureTaskList } from "./TaskList";
 import * as TaskStories from "./Task.stories";
+import {
+  Title,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+} from "@storybook/addon-docs/blocks";
 
 export default {
   component: PureTaskList,
   title: "TaskList",
   decorators: [(story: any) => <div style={{ padding: "3em" }}>{story()}</div>],
+  parameters: {
+    docs: {
+      page: () => (
+        <>
+          <Title>TaskList</Title>
+          <Description>Description</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => <PureTaskList {...args} />;

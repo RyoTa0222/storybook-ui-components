@@ -5,7 +5,6 @@ import { Story, Meta } from "@storybook/react";
 import { Props } from "./InboxScreen";
 import { PureInboxScreen } from "./InboxScreen";
 import * as TaskListStories from "./TaskList.stories";
-import "../index.css";
 
 // A super-simple mock of a redux store
 const store = {

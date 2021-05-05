@@ -3,7 +3,7 @@ import Task from "./Task";
 import { connect } from "react-redux";
 import { archiveTask, pinTask } from "../lib/redux";
 
-export interface Task {
+export interface TaskProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -30,7 +30,7 @@ export interface Props {
   /**
    * How large should the button be?
    */
-  tasks: Task[];
+  tasks: TaskProps[];
   /**
    * Optional click handler
    */

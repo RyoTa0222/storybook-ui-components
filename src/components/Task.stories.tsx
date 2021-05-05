@@ -1,13 +1,34 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
 import { Props } from "./Task";
-
 import Task from "./Task";
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+} from "@storybook/addon-docs/blocks";
 
 export default {
   component: Task,
   title: "Task",
-  argTypes: {},
+  parameters: {
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Subtitle />
+          <Description />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
+    },
+  },
 } as Meta;
 
 const Template: Story<Props> = (args) => <Task {...args} />;
